@@ -1,0 +1,43 @@
+﻿ANÁLISE DA DISTRIBUIÇÃO DE CASOS DE HIV E SUA RELAÇÃO COM A POPULAÇÃO MUNICIPAL
+
+
+Integrantes:
+Dayana Nascimento
+Gabriel
+Nicolas
+Yara Rodrigues
+
+
+O que será analisado?
+
+
+O projeto tem como objetivo analisar os dados de HIV dos municípios, buscando identificar padrões de distribuição dos casos e verificar se existe relação entre o número de casos registrados e o tamanho da população. A análise será realizada utilizando o R, permitindo trabalhar estatisticamente com os dados e produzir gráficos que facilitem a interpretação dos resultados.
+
+
+Serão analisados principalmente:
+- número de casos de HIV por município;
+- relação entre número de casos e tamanho da população;
+- municípios que apresentam maior número de casos;
+- municípios que apresentam valores considerados mais elevados em relação à sua população;
+- possíveis correlações entre as variáveis analisadas.
+
+
+O que será feito no R?
+No R, serão realizadas análises estatísticas e gráficas para compreender a relação entre os dados.
+Entre os procedimentos previstos estão: ??? ( falta fazer
+
+
+• Análise de correlação: ?
+
+
+• Gráficos comparativos: ?
+
+
+• Identificação de municípios problemáticos:  ?
+
+
+• Gráfico de dispersão:?
+
+
+Por que analisar essa relação?
+Analisar somente o número absoluto de casos pode gerar uma interpretação equivocada, pois municípios com populações maiores naturalmente podem apresentar mais casos devido ao maior número de habitantes. Por isso, comparar os casos de HIV com a população municipal permite verificar se a concentração de casos está relacionada principalmente ao tamanho da população ou se existem municípios que apresentam valores elevados mesmo possuindo uma população relativamente menor.
