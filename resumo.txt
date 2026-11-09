@@ -1,10 +1,10 @@
 ﻿ANÁLISE DA DISTRIBUIÇÃO DE CASOS DE HIV E SUA RELAÇÃO COM A POPULAÇÃO MUNICIPAL
 
 Integrantes:
-Dayana Nascimento
-Gabriel
-Nicolas
-Yara Rodrigues
+Dayana Esther Nascimento de Souza 
+Gabriel Fauro de Araújo
+Nícholas de Paula Nicomedes 
+Yara de Souza Rodrigues
 
 O que será analisado?
 
@@ -19,15 +19,25 @@ Serão analisados principalmente:
 
 O que será feito no R?
 No R, serão realizadas análises estatísticas e gráficas para compreender a relação entre os dados.
-Entre os procedimentos previstos estão: ??? ( falta fazer
+Entre os procedimentos previstos estão:
 
-• Análise de correlação: ?
+• Análise de correlação: cálculo do coeficiente de Spearman, para cada ano, entre as taxas de HIV/AIDS (brutas e suavizadas) e a densidade demográfica (em escala logarítmica) e o índice de urbanização, além da correlação entre as taxas de HIV/AIDS e de sífilis. Por se tratar de dados agregados por município, as correlações serão interpretadas em nível ecológico, sem extrapolação para o nível individual. Como densidade e urbanização são fortemente correlacionadas entre si, a colinearidade entre elas será avaliada antes de usá-las conjuntamente.
 
-• Gráficos comparativos: ?
+• Gráficos comparativos: séries temporais das taxas de 2019 a 2023 para o estado e por faixa de porte populacional, com destaque para o período pandêmico de COVID-19 (2020–2021); boxplots das taxas por ano; e mapas municipais comparando taxas brutas e taxas suavizadas.
 
-• Identificação de municípios problemáticos:  ?
+• Identificação de municípios problemáticos: (i) municípios com taxas extremas, avaliados quanto à presença de unidades prisionais; (ii) aglomerados espaciais de taxas elevadas e reduzidas, identificados por autocorrelação espacial (índice de Moran global e LISA); e (iii) municípios com maior déficit de notificação durante a pandemia, medido pelo P-score [(observado − esperado) / esperado], em que o esperado para 2020–2021 é estimado a partir dos anos não pandêmicos (2019, 2022 e 2023).
 
-• Gráfico de dispersão:?
+• Gráfico de dispersão: número de casos versus população municipal em escala log-log, com a reta de casos esperados segundo a taxa estadual, o que evidencia os municípios acima e abaixo do esperado para seu tamanho; e taxas versus densidade demográfica e urbanização, diferenciadas por ano.
 
 Por que analisar essa relação?
 Analisar somente o número absoluto de casos pode gerar uma interpretação equivocada, pois municípios com populações maiores naturalmente podem apresentar mais casos devido ao maior número de habitantes. Por isso, comparar os casos de HIV com a população municipal permite verificar se a concentração de casos está relacionada principalmente ao tamanho da população ou se existem municípios que apresentam valores elevados mesmo possuindo uma população relativamente menor.
+
+Base de dados
+Os dados abrangem os 645 municípios do estado de São Paulo no período de 2019 a 2023 e compreendem: taxa de notificação de HIV/AIDS e taxa de notificação de sífilis (casos por 10.000 habitantes), densidade demográfica (habitantes/km²) e índice de urbanização (área urbanizada/área total do município). O período inclui um ano pré-pandêmico (2019), os anos de maior impacto da pandemia de COVID-19 (2020–2021) e os anos subsequentes (2022–2023).
+
+Limitações
+- A série contém apenas cinco anos, com um único ano pré-pandêmico, o que não permite estimar a tendência anterior à pandemia nem atribuir causalmente a ela as variações observadas.
+- A redução das notificações em 2020–2021 reflete, provavelmente, a menor testagem e a desorganização da vigilância durante a pandemia, e não necessariamente redução da transmissão; os resultados serão interpretados como variação das notificações.
+- Elevada proporção de municípios sem notificação ao longo de todo o período (160 municípios para HIV/AIDS e 189 para sífilis), o que torna as taxas brutas instáveis em municípios pequenos; essa limitação é tratada com suavização e modelos de contagem, e não com a exclusão desses municípios.
+- Densidade e urbanização variam pouco no período e explicam principalmente diferenças entre municípios, e não mudanças ao longo do tempo.
+- As associações são ecológicas e não permitem inferências em nível individual.
