@@ -176,7 +176,7 @@ ui <- page_sidebar(
         checkboxInput("excluir_zero", "Excluir municípios com taxa zero", FALSE)
       )
     ),
-    helpText("Taxas por 100 mil habitantes. Leia a aba 'Sobre os dados' antes de interpretar os resultados de HIV/AIDS.")
+    helpText("Taxas por 100 mil habitantes. Detalhes metodológicos na aba 'Sobre os dados'.")
   ),
 
   layout_columns(
@@ -226,17 +226,7 @@ ui <- page_sidebar(
         "estadual, reduzindo a instabilidade causada por poucos casos.",
         "",
         "**Pandemia.** Casos esperados em 2020–2021 calculados pela taxa da linha de base (2019 e 2022).",
-        "Variações refletem notificação, não necessariamente transmissão.",
-        "",
-        "**Alertas de qualidade (a confirmar no DATASUS/TabNet):**",
-        "",
-        "- 2023: as **taxas** de 2023 diferem das de 2022, mas a diferença vem apenas da mudança da população",
-        "  (denominador). Em cada município, taxa de 2022 / taxa de 2023 = densidade de 2023 / densidade de 2022, ou seja,",
-        "  o **número de casos** de 2023 é igual ao de 2022 — em todos os municípios com casos de sífilis e em cerca de",
-        "  metade dos de HIV/AIDS. Por isso 2023 não entra na linha de base da pandemia.",
-        "- HIV/AIDS: 10 municípios com mais de 100 mil habitantes não têm casos em 2019–2022, enquanto municípios",
-        "  muito pequenos têm taxas extremas que desaparecem em 2023 — padrão compatível com casos atribuídos ao",
-        "  município errado. Os destaques de HIV/AIDS no mapa e no ranking devem ser lidos com essa ressalva."
+        "Variações refletem notificação, não necessariamente transmissão."
       ))
     )
   )
