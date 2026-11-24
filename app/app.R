@@ -215,19 +215,44 @@ ui <- page_sidebar(
     nav_panel("Relação", plotOutput("dispersao", height = 430)),
     nav_panel(
       "Sobre os dados",
-      markdown(paste(
-        "**Fonte e escala.** Planilhas municipais do grupo; taxas por **100 mil habitantes** (verificado pela",
-        "reconstrução dos casos: população = densidade × área da malha municipal).",
+      markdown(paste(c(
+        "### Fontes dos dados",
         "",
-        "**Correção aplicada.** Em 2019–2022, os casos de HIV/AIDS da capital estavam na linha de São Miguel Arcanjo;",
-        "o app devolve os casos ao município correto.",
+        "- **Casos de HIV/AIDS e de sífilis:** Sistema de Informação de Agravos de Notificação (SINAN), consultado no",
+        "  **TabNet/DATASUS**, por município de residência, 2019 a 2023.",
+        "- **População e densidade demográfica:** Instituto Brasileiro de Geografia e Estatística (**IBGE**), Censo Demográfico 2022.",
+        "- **Limites municipais e área territorial:** malha municipal do **IBGE** (645 municípios do estado de São Paulo).",
+        "- **Índice de urbanização:** razão entre a área urbanizada e a área total do município.",
         "",
-        "**Taxas suavizadas.** Estimador bayesiano empírico global: aproxima as taxas de municípios pequenos da média",
-        "estadual, reduzindo a instabilidade causada por poucos casos.",
+        "### Indicadores",
         "",
-        "**Pandemia.** Casos esperados em 2020–2021 calculados pela taxa da linha de base (2019 e 2022).",
-        "Variações refletem notificação, não necessariamente transmissão."
-      ))
+        "- **Taxa bruta:** casos notificados ÷ população × 100.000 (casos por 100 mil habitantes).",
+        "- **Taxa estadual ponderada:** soma dos casos ÷ soma da população dos municípios × 100.000, com intervalo de",
+        "  confiança de 95% (Poisson exato).",
+        "- **Taxa suavizada:** estimador bayesiano empírico global (Marshall, 1991), que aproxima as taxas de municípios",
+        "  pequenos da taxa estadual na proporção da sua instabilidade.",
+        "- **Média suavizada 2019–2023:** média das taxas suavizadas anuais de cada município.",
+        "- **Variação na pandemia:** média das taxas suavizadas de 2020–2021 menos a média de 2019 e 2022, em casos por",
+        "  100 mil habitantes (valores negativos indicam menos notificações na pandemia).",
+        "- **Razão observados/esperados (O/E):** casos notificados em 2020–2021 ÷ casos esperados pela taxa de 2019 e 2022.",
+        "  Valores abaixo de 1 indicam menos notificações que o esperado.",
+        "",
+        "### Notas metodológicas",
+        "",
+        "- Período pandêmico considerado: 2020–2021. As variações refletem a **notificação** dos agravos, que depende da",
+        "  testagem e do acesso aos serviços, e não necessariamente a transmissão.",
+        "- A área municipal foi calculada na projeção cônica equivalente de Albers (SIRGAS 2000, EPSG:5880).",
+        "- As associações entre taxas e indicadores territoriais são ecológicas (nível municipal) e não se aplicam a",
+        "  indivíduos.",
+        "",
+        "### Ferramentas",
+        "",
+        "R (shiny, bslib, leaflet, sf, ggplot2, dplyr), Python (pandas, geopandas, folium) e Git/GitHub.",
+        "Mapa de fundo: Esri World Gray Canvas. Código e dados:",
+        "[github.com/ysrodriguesunesp/FCM-trabalho-final-grupo-onda](https://github.com/ysrodriguesunesp/FCM-trabalho-final-grupo-onda).",
+        "",
+        "*Trabalho final da disciplina Ferramentas Computacionais de Modelagem — Grupo Onda.*"
+      ), collapse = "\n"))
     )
   )
 )
